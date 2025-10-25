@@ -1,0 +1,60 @@
+<h1>Contextual Variable in Angular</h1>
+@for(user of users; track user){
+    <h3>This is our {{$index}} user and name is{{user}}</h3>
+}
+
+<hr>
+
+@for(user of users; track user; let i=$index){
+    <h3>This is our {{i}} user and name is{{user}}</h3>
+}
+
+
+<hr>
+
+@for(user of users; track user; let i=$index){
+    @if($last){
+        <h4 style="background-color: red;">This is our {{i}} user and name is{{user}}</h4>
+    }@else if($first){
+        <h4 style="background-color: green;">This is our {{i}} user and name is{{user}}</h4>
+    }@else{
+        <h3>This is our {{i}} user and name is{{user}}</h3>
+
+    }
+}
+
+
+<hr>
+@for(user of users; track user; let i=$index; let f=$first; let l=$last;){
+    @if(l){
+        <h4 style="background-color: red;">This is our {{i}} user and name is{{user}}</h4>
+    }@else if(f){
+        <h4 style="background-color: green;">This is our {{i}} user and name is{{user}}</h4>
+    }@else{
+        <h3>This is our {{i}} user and name is{{user}}</h3>
+
+    }
+}
+
+<hr>
+@for(user of users; track user; let i=$index; let f=$first; let l=$last;){
+    @if($even){
+        <h4 style="background-color: red;">This is our {{i}} user and name is{{user}}</h4>
+    }@else{
+        <h4 style="background-color: green;">This is our {{i}} user and name is{{user}}</h4>
+    }
+}
+
+
+<hr>
+@for(b of bolls; track b;){
+    @if($even){
+        <h4 style="background-color: red;">{{b}}</h4>
+    }@else{
+        <h4 style="background-color: green;">{{b}}</h4>
+    }
+}@empty{
+    <h3>No records found in Balls array</h3>
+}
+
+

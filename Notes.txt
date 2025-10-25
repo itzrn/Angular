@@ -1,0 +1,225 @@
+Here is the need of node, which set up the full angular.
+After the setup there is no need of node.
+
+Angular have the built in feature of routing which is not there in react
+
+React is a library, Angular is a framework
+it's a component based structure
+Large Community
+
+Here fast development is possible
+
+This is one page website
+
+npm i -g @angular/cli
+-g means that we are installing globally in out system, which allow you to use to other folders also
+
+to know the version of angular 
+ng version
+
+
+to create a project
+ng new application-name
+
+
+{{}} -> is called interpolation
+
+export class App {
+  title=`angular-learning`;
+  name:string="Aryan";
+} here title, name is the class properties, here inside we won't use any let, var, const
+we can not do this directly inside the class but we can do this in function
+
+package.json is the imp file
+
+tsconfig.json(apply configuration outside the src folder)(focus on the configuration which is resposible for building the project) is also an imp file here you can set the js file which will get generate will get into which folder etc
+
+there is file tsconfig.app.json(apply configuration inside the src folder)(this extends tsconfig.json), its not very different with tsconfig.json, basically it apply the configuration for the folder app which is present in the src
+
+tsconfig.spec.json is use to write the configuration for testing code of the project
+
+angular.json this is used in the configuration of the project, which file will first load then next file to load
+
+package-lock.json this is the file which get create when you create the project
+whenever new package is installed then in the fill all the detaisl is mentioned about it
+this also tell the exact version got installed of each of the lib
+
+.editorconfig tell about the editor, what indentation size will be, what character set will be used etc
+configuration file for editor
+
+all the lib which is installed in the project get store in the node_module folder, this automatically get install when npm command is run
+
+src is the folder where you keep you project code
+
+index.html is the first file which get load
+
+main.ts is the entry point for the ts script, this only decide which component will get start when
+
+in public folder some public images, files are kept
+
+the entry point index.html and main.ts is written in angular.json it make it to tun them
+
+there will always need to make the use of those variable in .html file from .ts file, those variable get use in .html files
+using interpolation -> {{}} -> this area is like js file 
+{{2+2}} -> prints on the screen as 4
+
+the ts file should be of same name as of html file to use those variables
+moreover in every .ts file there is (templateUrl: './app.html',) in that .html file you can make it display
+
+limitation of interpolation
+- can not assign variable
+- can not use increment operator or decrement operator
+- loops can not be used
+
+
+
+What is angular CLI?
+Helps developers create, build, test and deploy angular application
+
+
+to generate a new component
+ng generate component component-name
+ng g c component-name
+
+to generate a new pipe
+ng generate pipe pipe-name
+
+ng help will show all commmand that is used in angular
+
+
+
+what is components?
+the small small parts of a project is called as component
+we can also put one component to another component
+these are building bloack of angular project
+
+A component have four files
+.html -> to write the html code
+.css -> this is to write the style code
+.ts -> ts code
+.spec.ts -> this is used to write the code for unit test
+
+there are teo types of component
+inline and normal
+
+Component must have .ts file
+
+Whenever we make component then we use @ sign
+
+in each component atleast two things are need to mentioned
+- selector
+- template
+
+if you write the component name with div then angular will override the functionality of html div
+so its better not to use the keywords
+
+We can use a component in another component with the hep of it selector, perhaps u have to impot selector of child into parent file
+
+To style somthings which is gloablly reamins constant then you can use then you can use styles.css file present in the project
+
+but how this styles.css is connected to it
+refer angular.json, which allow you to make that file treat as gloablly, even you can add one more .css file there
+
+if in the style attribute of angular.json there are many .css file and suppose there is one property(background-color) where two files says differently then which fils will the compiler follow -> the last file things will get follow.
+
+use styles:[] in .ts file when you need to specifially use to change small thing in that particular component
+
+styleUrls:[] this can be used to apply more than one .css file on a component
+
+
+Signals?
+Signals are reactive
+A signal is a wrapper around a value
+That give a signal when value changes
+this get import from the angular core package
+to update it there is a set function
+with the help of .effect function you will come to know which signal value got change
+
+Signals are of two types:
+Writable -> can be change
+Computed -> read only
+
+Computed signals are read only, that can not be change forcefully, but if they are dependent on any other signal 
+then they got change.
+
+
+
+Effects ->
+
+Contextual variable
+$count
+$last
+$index
+$first
+$odd and #even
+empty block with for loops
+
+
+Two way binding ->
+mean that a variable is there, if that variable is changed in ts file then itshould get reflect in html file and vice versa
+
+
+Dynamic Styling in angular -> yet to do
+
+
+Directives
+- Directives is class(of js) which provide additional behavioues to elements in your application
+- this is a feature in angular that help you to provide more power to DOM elements
+
+if-else condition
+for loop
+add style
+ngif, ngfor, ngstyle, ngclass
+
+Types of Directives
+  Component Directives
+  Used in component template file
+
+Structural Directives
+  Change the structure of the DOM by adding removing or manupulating elements
+
+Sttribute Directives
+  Modify the appearance or behavious of an exsisting element
+
+
+
+ngFor ->
+  with the help of it we can do the loopings on element tags
+
+Forms 
+  Used for
+    Login, SignUp, Email subscription, adding or updating data in DB
+
+Angular Have two type of Forms
+  - reactive -> scalable reusable testable deal with complex data
+                created in component class
+                stuctures and immutable
+                synchronous
+                functions
+  - Template-driven -> deal with simple like singin sign up login
+                    created by directives
+                    unstructured and mutable
+                    asynchronous
+                    directives
+
+
+Form Grouping
+  Organization and Readability
+  Validation and error handeling
+  Accessing Group value
+  
+
+Reactive Forms Validation
+Define Validation
+  Required
+  min character
+  eamil Validation
+Make getter method
+define validation message
+define error message
+add style
+
+
+Template Driven Form
+Forms which is compltyly controleld from html
+used for basic fomrs

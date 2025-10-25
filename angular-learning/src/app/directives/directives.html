@@ -1,0 +1,48 @@
+<h1>Directives In Angular</h1>
+
+<h4>NgIf</h4>
+<h2 *ngIf="show">Want to hide or Show this tag using Directives</h2>
+
+<hr>
+<h1>ng For</h1>
+
+<ul>
+    <li *ngFor="let x of students">
+        {{x}}
+    </li>
+</ul>
+
+<h4>for complex data</h4>
+
+<ul>
+    <li *ngFor="let data of datas">
+        {{data.id}}, {{data.name}}
+    </li>
+</ul>
+
+<hr>
+
+<h4>NgIf</h4>
+
+<div *ngIf="login; else elseBlock">
+    <a href="">logout</a>
+</div>
+<ng-template #elseBlock>
+    <a href="">login</a>
+</ng-template>
+
+
+<hr>
+<h1>*ngSwitch</h1>
+
+<div [ngSwitch]="color">
+    <h1 *ngSwitchCase="'red'" style="background-color: red;">Red</h1>
+    <h1 *ngSwitchCase="'green'" style="background-color: green;">Green</h1>
+    <h1 *ngSwitchCase="'blue'" style="background-color: blue;">Blue</h1>
+    <h1 *ngSwitchCase="'purple'" style="background-color: purple;">Purple</h1>
+    <h1 *ngSwitchCase="'pink'" style="background-color: pink;">Pink</h1>
+    <h1 *ngSwitchCase="'orange'" style="background-color: orange;">Orange</h1>
+    <h1 *ngSwitchDefault>No Color Match</h1>
+
+</div>
+

@@ -1,0 +1,91 @@
+<h1>If-Else In Angular | Hide-Show | Toggle</h1>
+
+@if (display) {
+  <div style="width: 200px; height: 200px; background-color: aquamarine;">
+    This box is visible!
+  </div>
+}@else{
+    <p>Display is Turned Off.</p>
+}
+
+<hr>
+
+<button (click)="hide()">{{display1?'Hide Pink Div':'Show Pink Div'}}</button>
+
+@if (display1){
+    <div style="width: 200px; height: 200px; background-color: pink; margin-top: 10px;">
+        This box is visible!
+    </div>
+}@else{
+    <p>Display is Turned Off.</p>
+}
+
+<hr>
+<h1>If-Else In Angular | Hide-Show | Toggle</h1>
+
+<button (click)="handleColor(1)">red</button>
+<button (click)="handleColor(2)">green</button>
+<button (click)="handleColor(3)">blue</button>
+<button (click)="handleColor(10)">other</button>
+
+<input type="text" (click)="handleInput($event)" placeholder="enter color number" >
+
+@if(color==1){
+  <div style="background-color: red; height: 100px; width: 100px;">
+
+  </div>
+}@else if(color ==2){
+  <div style="background-color: green; height: 100px; width: 100px;">
+
+  </div>
+}@else if(color==3){
+  <div style="background-color: blue; height: 100px; width: 100px;">
+
+  </div>
+}@else{
+  <div style="background-color: black; height: 100px; width: 100px;">
+
+  </div>
+}
+
+
+<hr>
+
+<button (click)="handleColor1(1)">red</button>
+<button (click)="handleColor1(2)">green</button>
+<button (click)="handleColor1(3)">blue</button>
+<button (click)="handleColor1(10)">other</button>
+
+
+@switch(color1){
+  @case(1){
+    <div style="background-color: red; height: 100px; width: 100px;">
+
+  </div>
+  }@case(2){
+    <div style="background-color: green; height: 100px; width: 100px;">
+
+    </div>
+  }@case(3){
+    <div style="background-color: blue; height: 100px; width: 100px;">
+
+    </div>
+  }@default{
+    <div style="background-color: black; height: 100px; width: 100px;">
+
+  </div>
+  }
+}
+
+
+<hr>
+
+@for(num of arr;track arr){
+  <h2>{{num}}</h2>
+}
+
+<hr>
+
+@for(student of students;track student.name){
+  <h2>{{student.name}}</h2>
+}

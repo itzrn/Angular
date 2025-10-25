@@ -1,0 +1,15 @@
+<h1>Get And Set Of Input Field In Angular</h1>
+<h1>User Name is : {{displayName}}</h1>
+<input type="text" value="{{name}}" placeholder="Enter User Name" (input)="getName($event)">
+<br>
+<br>
+<button (click)="showName()">Get Name</button>
+<br>
+<button (click)="setName()">Set Name</button>
+
+<hr>
+<h1>Email : {{email}}</h1>
+<input type="text" value="{{stemail}}" name="enter email" #emailField>
+<button (click)="getEmail(emailField.value)">Get Email</button>
+<button (click)="setEmail()">Set Email</button>
+#emailField is used to give the reference the input tag to button

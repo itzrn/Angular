@@ -1,0 +1,14 @@
+<h1>Two Do List In Angular</h1>
+<input [(ngModel)]="task" type="text" placeholder="Enter New Task">
+<br>
+<button (click)="addTask()">Add Task</button>
+
+<hr>
+
+@for(item of taskList; track item.id){
+    <ul class="task-list">
+        <li>{{item.id}}</li>
+        <li>{{item.task}}</li>
+        <li><button (click)="deleteTask(item.id)">Delete</button></li>
+    </ul>
+}

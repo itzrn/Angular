@@ -1,0 +1,12 @@
+<h1>Style Options in Angular</h1>
+
+To style somthings which is gloablly reamins constant then you can use then you can use styles.css file present in the project <br>
+
+but how this styles.css is connected to it <br>
+refer angular.json, which allow you to make that file treat as gloablly, even you can add one more .css file there <br>
+
+if in the style attribute of angular.json there are many .css file and suppose there is one property(background-color) where two files says differently then which fils will the compiler follow -> the last file things will get follow. <br>
+
+use styles:[] in .ts file when you need to specifially use to change small thing in that particular component <br>
+
+styleUrls:[] this can be used to apply more than one .css file on a component

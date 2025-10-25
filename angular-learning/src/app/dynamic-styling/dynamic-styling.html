@@ -1,0 +1,12 @@
+<h1>Dynamic Styling in Angular</h1>
+
+<h2 [style.backgroundColor]="bgcolor" >Dyanmic styling Backgorund Color</h2>
+<h2 [style.fontSize]="fontSize" >Dyanmic styling in Font</h2>
+<h2 [style.fontSize.px]="fontSIZE" >Dyanmic styling in Font</h2>
+<!-- .pt percentage -->
+
+<hr>
+
+<h1 [style.fontSize]="zoom?headingSizeBig:headingSizeSmall">Heading</h1>
+<h1 [style.fontSize]="zoom?'50px':'20px'">Heading</h1>
+<!-- <h1 [style.fontSize]="headingSizeSmall">Heading</h1> -->

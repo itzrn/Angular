@@ -1,0 +1,10 @@
+<h1>Events In Angular</h1>
+<button name="btn-prac" (click)="handleEvent($event)">Click Event</button>
+
+<div style="width: 80px; height: 80px; background-color: red; border: 2px solid black; margin: 5px;" (mouseleave)="handleEvent($event)">
+
+</div>
+
+<div style="color:white; width: 80px; height: 80px; background-color: blue; border: 2px solid black; margin: 5px;" (mouseenter)="handleEvent($event)">
+    can pass blur or focus
+</div>

@@ -1,0 +1,32 @@
+.btn{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+.bg-red{
+    background-color: red;
+}
+.bg-green{
+    background-color: green;
+}
+.bg-black{
+    background-color: black;
+}
+
+.btn:hover{
+    border: 1px solid #fff;
+}
+
+h2{
+    width: 100px;
+    padding: 10px;
+    background: gray;
+    font-size: 30px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 30px;
+}
